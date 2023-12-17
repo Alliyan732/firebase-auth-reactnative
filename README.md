@@ -1,79 +1,91 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+## React Native Firebase Authentication
 
-# Getting Started
+This React Native project demonstrates Firebase Authentication using the Firebase Web SDK. The app includes features such as user signup, signin, signout, and email/password recovery.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Table of Contents
 
-## Step 1: Start the Metro Server
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Folder Structure](#folder-structure)
+- [License](#license)
+- [Support](#support)
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Features
 
-To start Metro, run the following command from the _root_ of your React Native project:
+- User Signup: Allowing users to create a new account.
+- User Signin: Authenticating users with their email and password.
+- Signout: Providing users with the ability to sign out.
+- Email/Password Recovery: Implementing a mechanism for users to recover their accounts.
 
-```bash
-# using npm
-npm start
+### Getting Started
 
-# OR using Yarn
-yarn start
-```
+### Prerequisites
 
-## Step 2: Start your Application
+Before you begin, ensure you have the following installed on your machine:
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
+- [React Native CLI](https://reactnative.dev/docs/environment-setup)
 
-### For Android
+### Installation
 
-```bash
-# using npm
-npm run android
+1. Clone the repository:
 
-# OR using Yarn
-yarn android
-```
+   ```bash
+   git clone https://github.com/Alliyan732/firebase-auth-reactnative
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd < Project Folder >
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+## Configuration
 
-### For iOS
+Before running the app, you need to configure Firebase:
 
-```bash
-# using npm
-npm run ios
+1. Create a Firebase project on the Firebase Console.
+2. Add a new web app to your project.
+3. Copy the Firebase configuration (apiKey, authDomain, projectId, etc.) from the Firebase Console.
+3. Open src/services/firebase.config.js and replace the placeholder values with your Firebase configuration.
 
-# OR using Yarn
-yarn ios
-```
+## Usage
+   ```bash
+   npx react-native run-android
+   ```
+   or
+   ```bash
+   npx react-native run-ios
+   ```
+## Folder Structure
+├── src/
+│   ├── components/
+│   ├── screens/
+│   ├── services/
+│   ├── App.js
+│   └── ...
+├── .gitignore
+├── README.md
+├── package.json
+└── ...
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+## Author
+Aalliyan Alvi
 
-## Step 3: Modifying your App
+## Support
+If you encounter any issues or have any questions or suggestions, please feel free to open an issue. We appreciate your feedback and contributions to the project.
 
-Now that you have successfully run the app, let's modify it.
+Email: alliyan732@gmail.com
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+LinkedIn: https://www.linkedin.com/in/alliyan-alvi/
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Happy Coding!
