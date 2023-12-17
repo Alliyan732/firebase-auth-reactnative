@@ -9,13 +9,13 @@ const Stack = createNativeStackNavigator();
 // importing screens 
 import SignInHome from './src/screens/SignInHome'
 import UserSignIn from './src/screens/UserSignIn'
-import UserSignUp from './src/screens/UserSignUp'
+// import UserSignUp from './src/screens/UserSignUp'
 
 export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-      <Stack.Screen
+        <Stack.Screen
           name="SignInHome"
           component={SignInHome}
           options={{ headerShown: false }}
@@ -25,11 +25,12 @@ export default function App() {
           component={UserSignIn}
           options={{ headerShown: false }}
         />
+        {/* 
         <Stack.Screen
           name="UserSignUp"
           component={UserSignUp}
           options={{ headerShown: false }}
-        />
+        /> */}
       </Stack.Navigator>
     </NavigationContainer>
   )
