@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import {
   SafeAreaView,
   StyleSheet,
@@ -8,9 +9,12 @@ import {
   Image,
   TextInput,
 } from 'react-native';
+
 import Icon from 'react-native-vector-icons/Feather';
 import EvilIcon from 'react-native-vector-icons/EvilIcons';
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+
 import { auth } from '../services/firebase.config';
 
 const UserSignIn = ({ navigation, route }) => {
@@ -22,7 +26,7 @@ const UserSignIn = ({ navigation, route }) => {
     createUserWithEmailAndPassword(auth, email, password)
       .then(userCredential => {
         navigation.navigate({
-          name: 'UserFirstSignIn',
+          name: 'UserSignIn',
           params: { Email: email, Password: password },
         });
         alert('Signed Up Successfully!');

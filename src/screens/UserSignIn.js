@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import {
   StyleSheet,
   Text,
@@ -8,16 +9,20 @@ import {
   TextInput,
   ScrollView,
 } from 'react-native';
+
 import Icon from 'react-native-vector-icons/Feather';
 import EvilIcon from 'react-native-vector-icons/EvilIcons';
 import Ionicon from 'react-native-vector-icons/Ionicons';
+
 import {
   signInWithEmailAndPassword,
   sendPasswordResetEmail,
 } from 'firebase/auth';
+
 import { auth } from '../services/firebase.config';
 
 const UserSignIn = ({ navigation, route }) => {
+
   const [email, setEmail] = React.useState(null);
   const [password, setPassword] = React.useState(null);
   const [isSecureEntry, setIsSecureEntry] = useState(true);
@@ -25,7 +30,7 @@ const UserSignIn = ({ navigation, route }) => {
   const signIn = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then(userCredential => {
-        navigation.navigate('UserHome');
+        navigation.navigate('Home');
       })
 
       .catch(error => {

@@ -9,6 +9,7 @@ const Stack = createNativeStackNavigator();
 import SignInHome from './src/screens/SignInHome'
 import UserSignIn from './src/screens/UserSignIn'
 import UserSignUp from './src/screens/UserSignUp'
+import Home from './src/screens/Home'
 
 export default function App() {
   return (
@@ -31,6 +32,11 @@ export default function App() {
           name="UserSignUp"
           component={UserSignUp}
           options={{ headerShown: false }}
+        />
+
+        <Stack.Screen
+          name="Home"
+          component={Home}
         />
 
       </Stack.Navigator>
