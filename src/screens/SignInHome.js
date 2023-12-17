@@ -38,7 +38,7 @@ const SignInHome = ({navigation}) => {
           <Text style={styles.filledButtonText}>Sign Up</Text>
         </TouchableOpacity>
 
-        <Text style={styles.copyrightText}>@2022 Caravan</Text>
+        <Text style={styles.copyrightText}>@2024 Firebase Auth ~ Alliyan Alvi</Text>
       </View>
     </View>
   );
